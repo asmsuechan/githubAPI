@@ -23,8 +23,7 @@ for page_number in range(9):
   for repo in repositories.get_page(page_number):
     number_of_repos += 1
     # db.my_collection.insert_one([langid.classify(base64.b64decode(repo.get_readme().content)), repo]).inserted_id
-    print(number_of_repos)
-    db.my_collection.insert_one({'id': number_of_repos, 'lang': langid.classify(base64.b64decode(repo.get_readme().content)), 'repo_name': repo.full_name})
+    db.my_collection.insert_one(repo)
 
 # Get stargazers of the repository
 # repository = g.get_repo('BoostIO/Boostnote')
