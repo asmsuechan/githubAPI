@@ -34,6 +34,9 @@ for page_number in range(9):
 #       pdb.set_trace()
 #       print(stargazer)
 
+def look_methods (obj):
+  [attr for attr in dir(obj) if callable(getattr(obj,  str(attr)))]
+
 # ~~~ MY PYTHON TRAINING ~~~
 # pdb.set_trace()
 # obj_methods = [attr for attr in dir(obj) if callable(getattr(obj,  str(attr)))]
